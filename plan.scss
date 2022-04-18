@@ -1,0 +1,129 @@
+$heading: #FF9D00;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lato", sans-serif;
+    background-color: #F0F0F0;
+    font-size: 16px;
+}
+.header{
+    width: 100%;
+    max-height: 180px;
+    min-height: 110px;
+    display: flex;
+    }
+// Section Paid Plans Styling Starts
+.paidPlan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .heading{
+        color: $heading;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-top: 4.56rem;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(3, 340px);
+        grid-template-rows: 20.835rem;
+        margin-top: 7.5rem;
+        gap: 3.75rem;
+        margin-bottom: 9.375rem;
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFFFFF; 
+            filter: drop-shadow(0px 3px 6px rgba(0,0,0,.16));
+            border-radius: 7px;
+            .heading{
+                font-size: 1.5em;
+                margin-top: 1.5em;
+            }
+            .description{
+                font-size: 1.125rem;
+                margin-top: 1.625rem;
+                text-align: center;
+            }
+            .numbers{
+                width: 100%;
+                max-width: 311px;
+                height: 41px;
+                background-color: #F6F6F6;
+                border-radius: 7px;
+            }
+            .noOfChannel{
+                margin-top: 1.625rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .common1{
+                font-size: 1rem;
+                margin-left: 1rem;
+            }
+            .common2{
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: $heading;
+                margin-right: 1rem;
+            }
+            .noOfDays{
+                margin-top: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content:space-between;
+    
+            }
+            .bill{
+                display: flex;
+                align-items: center;
+                margin-top: 0.9rem;
+                margin-bottom: 1.25rem;
+                .billINDollars{
+                    font-size: 2.75rem;
+                    font-weight: 900;
+                }
+                .billIntervals{
+                    font-size: 0.75rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
+@media (max-width:1200px) {
+    .cards{
+        gap: 1rem !important;
+    }
+}
+@media (max-width:1080px) {
+    .paidPlan{
+        .heading{
+            text-align: center;
+        }
+        .cards{
+            grid-template-columns: repeat(2, 340px) !important;
+        }    
+    }
+}
+@media (max-width:720px) {
+    .paidPlan{
+        .heading{
+            font-size: 1.5rem;
+            margin-top: 1.69rem;
+        }
+        .cards{
+            grid-template-columns: repeat(1, 340px) !important;
+            gap: 1.321rem !important;
+            margin-top: 2.25rem !important;
+            margin-bottom: 1.321rem !important;
+            }
+    } 
+}
+// Section Paid Plans Styling Ends
